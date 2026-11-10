@@ -101,6 +101,6 @@ Firefoxの実ブラウザ確認用には `scripts/firefox-smoke.py` を用意し
 
 ## プライバシーと権限
 
-詳しくは [PRIVACY.md](PRIVACY.md) を参照してください。必要な権限は `storage`・`alarms`・`notifications` のみです。閲覧ページへのアクセス、コンテンツスクリプト、アクセス解析、外部スクリプトは使用しません。
+[公開プライバシーポリシー](https://sasakitz.github.io/medication-reminder/privacy.html)（[Markdown版](PRIVACY.md)）を参照してください。必要な権限は `storage`・`alarms`・`notifications` のみです。閲覧ページへのアクセス、コンテンツスクリプト、アクセス解析、外部スクリプトは使用しません。
 
 実装時に確認した公式資料： [Chrome Storage](https://developer.chrome.com/docs/extensions/reference/api/storage)、[Chrome Alarms](https://developer.chrome.com/docs/extensions/reference/api/alarms)、[固定のChrome拡張機能ID](https://developer.chrome.com/docs/extensions/reference/manifest/key)、[Firefox background](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background)、[Firefox storage.sync](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync)、[Firefoxのデータ送信同意](https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/)。

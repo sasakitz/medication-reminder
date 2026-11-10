@@ -1,0 +1,21 @@
+:root {
+  color-scheme: light;
+  font-family: "Noto Sans JP", "Yu Gothic", Meiryo, system-ui, sans-serif;
+  color: #24332f;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.9;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, main { width: min(100% - 40px, 780px); margin: 0 auto; }
+header { padding-top: 20px; }
+nav { display: flex; gap: 24px; font-size: 14px; }
+main { padding: 28px 0 64px; }
+h1 { font-size: clamp(22px, 4vw, 28px); line-height: 1.6; margin: 0 0 24px; }
+h2 { font-size: 19px; line-height: 1.6; margin: 36px 0 12px; }
+p { margin: 0 0 18px; overflow-wrap: anywhere; }
+a { color: #176a58; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:focus-visible { outline: 3px solid #ba8b2e; outline-offset: 4px; }
+code { font-size: .9em; }
+li { margin: 10px 0; }
