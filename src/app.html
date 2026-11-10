@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ゆるり — おくすりの記録</title>
+  <link rel="icon" href="icons/icon-32.png">
+  <link rel="stylesheet" href="app.css">
+  <script src="core.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <a class="brand" href="app.html" aria-label="服薬記録 ホーム"><img src="icons/icon-48.png" alt="" width="24" height="24"><span>服薬記録</span></a>
+      <button id="expand" class="icon-button" aria-label="タブで開く" title="タブで開く">↗</button>
+    </header>
+    <nav class="tabs" aria-label="メインメニュー">
+      <button data-view="today" class="tab active" aria-current="page">今日の記録</button>
+      <button data-view="history" class="tab">履歴</button>
+      <button data-view="settings" class="tab">薬・設定</button>
+    </nav>
+    <main id="content" aria-busy="true"><p class="loading">記録を読み込んでいます…</p></main>
+  </div>
+  <div id="status" role="status" aria-live="polite" class="toast" hidden></div>
+  <dialog id="med-dialog" aria-labelledby="dialog-title">
+    <form id="med-form">
+      <div class="section-heading"><h2 id="dialog-title">薬を追加</h2><button type="button" id="close-dialog" class="icon-button" aria-label="閉じる">×</button></div>
+      <label class="field">薬の名前 <span class="required">必須</span><input name="name" required maxlength="60" autocomplete="off"></label>
+      <fieldset><legend>服薬する時間帯 <span class="required">1つ以上</span></legend><div class="period-choices"><label><input type="checkbox" name="periods" value="morning"><span>朝</span></label><label><input type="checkbox" name="periods" value="noon"><span>昼</span></label><label><input type="checkbox" name="periods" value="evening"><span>晩</span></label></div></fieldset>
+      <label class="field">メモ <span class="optional">任意</span><input name="note" maxlength="120" placeholder="例：食後に1錠" autocomplete="off"></label>
+      <label class="check-label"><input type="checkbox" name="active" checked> 有効</label>
+      <p class="fine">薬の名前・メモ・飲む時間帯は、ブラウザの同期対象です。</p>
+      <p id="form-error" class="error" role="alert"></p>
+      <div class="dialog-actions"><button type="button" id="cancel-dialog" class="button secondary">キャンセル</button><button type="submit" class="button primary">保存する</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
